@@ -122,9 +122,9 @@ export default function ForzenTable() {
               justifyCellItems="center"
               alignCellItems="center"
               columnsConfig="80px 1fr 2fr 80px"
-              data={frozenList.map((address)=>{
+              data={frozenList.map((address, index)=>{
                 return([
-                  <Avatar isRounded size={36} theme="image"/>,
+                  <Avatar isRounded size={36} theme="image" key={index}/>,
                   address,
                   <Button
                   id="test-button-primary"
@@ -133,7 +133,9 @@ export default function ForzenTable() {
                   theme="primary"
                   size="large"
                   type="button"
-                />]
+                  key={index}
+                />
+                ]
                 )
               })}
               header={[
