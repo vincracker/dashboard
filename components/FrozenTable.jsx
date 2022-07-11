@@ -140,8 +140,8 @@ export default function ForzenTable() {
               })}
               header={[
                 '',
-                <span>Frozen Address</span>,
-                <span>Interaction</span>,
+                <span key={1}>Frozen Address</span>,
+                <span key={2}>Interaction</span>,
                 ''
               ]}
               isColumnSortable={[
